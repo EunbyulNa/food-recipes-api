@@ -6,7 +6,7 @@
 
 
 # 2. What I learned
- * What are APIS? <br>
+#### 1. What are APIS? <br>
  An API is a set of commands, functions, protocols, and objects that programmers can use to create software or interact with an external system. 
  There are countless types of APIs available today, spanning across different industries and contexts. 
  For example, APIs can be used to access weather data, financial information, social media platforms, and more.
