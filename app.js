@@ -13,14 +13,47 @@ searchForm.addEventListener("submit", function(e){
 
 async function fetchAPI(){
   let baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&to=20`;
-  let response = await fetch(baseURL);
-  let data = await response.json()
-  //console.log(data)
-  generatedHTML(data.hits)
+ 
+
+ 
+    let response = await fetch(baseURL);
+    console.log(response)
+
+ 
+    let data = await response.json();
+   
+      generatedHTML(data.hits);
+
+     if(data.hits.length === 0 ){
+      console.log("empty")
+      generatedError()
+     }
+ 
 }
 
+  
+function generatedError(){
+  
+  let generateCard = '';
+
+  generateCard += 
+
+
+  ` <div class="item">
+ 
+  <div class="flex-container">
+    <h1 class="title">${`Sorry, there is no Data`}</h1>
+  
+
+</div> 
+  `
+
+  searchResultDiv.innerHTML = generateCard;
+  
+}
+
+
 function generatedHTML(results){
-console.log(results)
 
 let generateCard = '';
 
