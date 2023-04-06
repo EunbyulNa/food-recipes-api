@@ -1,6 +1,6 @@
 
 # API Food recipes app project  
-
+Enter food names you want to know recipes, you will see the results.
 
 # 1. How it works
 
